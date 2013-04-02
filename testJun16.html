@@ -1,0 +1,52 @@
+<script type="text/javascript">
+
+//Set the two dates; Aiming for Sunday, June 16, 2013
+today=new Date()
+var targetDate=new Date(today.getFullYear(), 5, 16) //Month is 0-11 in JavaScript
+if (today.getMonth()==6 && today.getDate()>16) //if June 16th has passed already
+targetDate.setFullYear(targetDate.getFullYear()+1) //calculate next year's June 16
+//Set 1 day in milliseconds
+var one_day=1000*60*60*24
+
+// aim:  5/7/2013 - Tuesday
+var targetDate2=new Date(today.getFullYear(), 4, 7) // month 4 is May in JS.
+if (today.getMonth()==5 && today.getDate()>7) 
+targetDate2.setFullYear(targetDate.getFullYear()+1) // calculate next year's May 7
+
+// aim: 10/1/2013 - Tuesday
+var targetDate3=new Date(today.getFullYear(), 9, 1) // month 9 is October in JS.
+if (today.getMonth()==10 && today.getDate()>1)
+targetDate3.setFullYear(targetDate.getFullYear() + 1) // calculate next year's October 1
+
+// aim:  1/9/2013 - Thursday
+var targetDate4=new Date(today.getFullYear(), 0, 9) // month 0 is January in JS
+if (today.getMonth()==1 && today.getDate()>9) // calculate next year's January 9
+targetDate4.setFullYear(targetDate.getFullYear() + 1)
+if (today.getMonth() > 1 )
+targetDate4.setFullYear(targetDate.getFullYear()+ 1 )
+
+
+//Calculate difference btw the two dates, and convert to days
+document.writeln(Math.ceil((targetDate2.getTime()-today.getTime())/(one_day))+
+" days  until May 7th! </br>");
+
+document.writeln(Math.ceil((targetDate.getTime()-today.getTime())/(one_day))+
+" days left until June 16th! </br>");
+
+document.writeln(Math.ceil((targetDate3.getTime()-today.getTime())/(one_day))+
+" days left until October 1st! </br>");
+
+document.writeln(Math.ceil((targetDate4.getTime()-today.getTime())/(one_day))+
+" days left until January 9, 2014! </br>");
+
+document.writeln(getFullYear());
+
+
+
+
+//Aim Line
+//Target Line
+//Workshop
+
+
+</script>
